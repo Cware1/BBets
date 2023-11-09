@@ -46,6 +46,8 @@ teachers <- numeric (40)
    teachers [i] <-BrLw()
 }
 birthdays1<- fav_stats(teachers)
+
+print(birthdays1$mean-2*birthdays1$sd)
 ```
 
 ## the standard deviation and a 95% confidence interval for their earnings?
