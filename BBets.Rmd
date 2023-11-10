@@ -48,7 +48,12 @@ teachers <- numeric (40)
 birthdays1<- fav_stats(teachers)
 
 print(birthdays1$mean-2*birthdays1$sd)
+print(birthdays1$mean+2*birthdays1$sd)
+
+"We can see that Brownlows are making an avarge birthdays1$mean with a standard deviation of birthdays1$sd. The 95% confidence level goes from 212.363 to 333.837"
 ```
+
+We can see that Brownlows are making an avarge profit$mean with a standard deviation of profit$sd. The 95% confidence level goes from 212.363 to 333.837.
 
 ## the standard deviation and a 95% confidence interval for their earnings?
   
