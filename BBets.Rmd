@@ -78,6 +78,16 @@ teachers <- numeric (1000)
 
 ```
 
+To start, we tested for best odds with 40 Brownlows. After testing thousands of times, we added more Brownlows to a total of 1000 Brownlows to test more odds.
+
+After testing multiple sets of odds, we found that 4.39 was the most stable set of odds.
+
+
+```{r}
+
+```
+
+
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
 
