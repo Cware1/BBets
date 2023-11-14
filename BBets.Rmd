@@ -101,6 +101,19 @@ hist(teachers,
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
+
+```{r}
+teachers <- numeric (40)
+ for (i in 1:40){
+   teachers [i] = BrLw(numClass= 28)
+}
+ favstats(teachers)
+
+```
+
+Starting with 1000 teachers and trying different numbers, we decided to lower the number of teachers to 40. Then we kept changing the number of students until we settled on 28. 
+
+
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 
