@@ -78,13 +78,19 @@ teachers <- numeric (1000)
 
 ```
 
-To start, we tested for best odds with 40 Brownlows. After testing thousands of times, we added more Brownlows to a total of 1000 Brownlows to test more odds.
+To start, we tested for best odds with 40 teachers. After testing thousands of times, we added more teachers to a total of 1000 because we couldn't make the odds stable. After adding more teachers, we tested the odds again.
 
 After testing multiple sets of odds, we found that 4.39 was the most stable set of odds.
 
 
 ```{r}
-
+# Create a histogram
+hist(teachers, 
+     main = "teachers Histogram",
+     xlab = "teachers",
+     ylab = "Frequency",
+     col = "skyblue",
+     border = "black")
 ```
 
 
