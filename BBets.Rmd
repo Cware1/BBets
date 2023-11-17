@@ -60,7 +60,19 @@ print(birthdays1$mean+2*birthdays1$sd)
 
 ```
 
-We can see that Brownlows are making an avarge profit$mean with a standard deviation of profit$sd. The 95% confidence level goes from 212.363 to 333.837.
+```{r}
+central <- favstats(teachers)
+
+cat("Mr Brownlow is on average making $",central$mean," over the course of the experiemnt.\n")
+
+cat("95% Conficence Interval: Low:$",central$mean - 2*central$sd,"- High $", central$mean + 2*central$sd)
+
+```
+
+
+We can see that Brownlows are making an average @"profit"$mean" "with" "a" "standard" "deviation" "of" "profit"$sd". The 95% confidence level goes from 212.363 to 333.837.
+
+
 
 ## the standard deviation and a 95% confidence interval for their earnings?
   
@@ -109,7 +121,15 @@ teachers <- numeric (40)
 }
  favstats(teachers)
 
+# Create a histogram
+hist(teachers, 
+     main = "teachers Histogram",
+     xlab = "teachers",
+     ylab = "Frequency",
+     col = "skyblue",
+     border = "black")
 ```
+
 
 Starting with 1000 teachers and trying different numbers, we decided to lower the number of teachers to 40. Then we kept changing the number of students until we settled on 28. 
 
