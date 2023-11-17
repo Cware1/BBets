@@ -32,7 +32,6 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 2. For what size class is a 2:1 odds bet fair.
 3. How much money would Brownlow be expected to end up with if the bets went as described.
 
-We 
 
 ## Our strategy is to build a Function and the use it to answer the three questions. 
 
@@ -46,19 +45,23 @@ The function will be given a class_size by number of students, odds, and Number_
 ## what is their average earnings & the standard deviation and a 95% confidence interval for their earnings?
 
 ```{r}
-teachers <- numeric (40)
- for (i in 1:40){
-   teachers [i] <-BrLw()
+options(digits = 2)
+teachers <- numeric(40)
+for (i in 1:40){
+  teachers[i]<-BrLw()
 }
-birthdays1<- fav_stats(teachers)
 
-print("We can say that Brownlows is making an avarge of")
-print(birthdays1$mean-2*birthdays1$sd)
+fav_stats(teachers) -> profit
+
+print("we can say that Mr. Brownlows is making an average of")
+print(profit$mean)
 print("The 95% confidence level goes from")
+print(profit$mean-2*profit$sd)
 print("to")
-print(birthdays1$mean+2*birthdays1$sd)
+print(profit$mean+2*profit$sd)
 
 ```
+
 
 ```{r}
 central <- favstats(teachers)
@@ -66,11 +69,11 @@ central <- favstats(teachers)
 cat("Mr Brownlow is on average making $",central$mean," over the course of the experiemnt.\n")
 
 cat("95% Conficence Interval: Low:$",central$mean - 2*central$sd,"- High $", central$mean + 2*central$sd)
-
 ```
 
 
-We can see that Brownlows are making an average @"profit"$mean" "with" "a" "standard" "deviation" "of" "profit"$sd". The 95% confidence level goes from 212.363 to 333.837.
+## We can say that Mr. Brownlows is making an average of `r profit$mean` with a standard deviation of `r profit$sd`. 
+
 
 
 
@@ -84,7 +87,7 @@ We can see that Brownlows are making an average @"profit"$mean" "with" "a" "stan
 ```{r}
 teachers <- numeric (1000)
  for (i in 1:1000){
-   teachers [i] = BrLw(odds=4.38)
+   teachers [i] = BrLw(odds=4.39)
 }
  favstats(teachers)
 
