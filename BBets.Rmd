@@ -93,9 +93,7 @@ teachers <- numeric (1000)
 
 ```
 
-To start, we tested for best odds with 40 teachers. After testing thousands of times, we added more teachers to a total of 1000 because we couldn't make the odds stable. After adding more teachers, we tested the odds again.
-
-After testing multiple sets of odds, we found that 4.39 was the most stable set of odds.
+## To start, we tested for best odds with 40 teachers. After testing thousands of times, we were unable to find a stable mean. So, we added more teachers, to a total of 1000. After adding more teachers, we tested the odds again.After testing multiple sets of odds, we found that 4.39 was the most stable set of odds.
 
 
 ```{r}
@@ -124,17 +122,10 @@ teachers <- numeric (40)
 }
  favstats(teachers)
 
-# Create a histogram
-hist(teachers, 
-     main = "teachers Histogram",
-     xlab = "teachers",
-     ylab = "Frequency",
-     col = "skyblue",
-     border = "black")
 ```
 
 
-Starting with 1000 teachers and trying different numbers, we decided to lower the number of teachers to 40. Then we kept changing the number of students until we settled on 28. 
+## After starting with 1000 students and trying different numbers, we decided to lower the number of students to 40. Still not able to get Brownlow's earnings down to zero, we tried 28 stduents. After seeing the results, we settled on 28 students because it gave us the closest number to zero. 
 
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
@@ -150,3 +141,5 @@ Starting with 1000 teachers and trying different numbers, we decided to lower th
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+
+## As we moved through this write up, we were able to manipulate the odds for both Brownlow and the students through trial and error before getting the desired results. We changed the number of teachers multiple times before settling 1000 to achieve the target mean. We were able to achieve this without any helper files. Although, we did receive the help of ChatGPT. 
